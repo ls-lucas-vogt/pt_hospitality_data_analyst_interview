@@ -32,7 +32,7 @@ You will demonstrate your ability to:
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
 
-3. Install the required packages: `pandas` and `numpy`
+3. Install the required packages from `requirements.txt` file.
 
 ## 📁 Initial Project Structure
 ```

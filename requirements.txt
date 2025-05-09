@@ -1,2 +1,5 @@
 pandas
 numpy
+pytest
+flake8
+black
