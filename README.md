@@ -36,14 +36,18 @@ You will demonstrate your ability to:
 
 ## 📁 Initial Project Structure
 ```
+pt_hospitality_data_analyst_interview/
 ├── data/
 │   └── sample.csv
 ├── src/
-│   └── processor.py      <- Implement your logic here
+│   └── processor.py
 ├── tests/
-│   └── test_processor.py <- Write at least one test
-├── main.py               <- Runs your script
+│   └── test_processor.py
+├── main.py
 ├── requirements.txt
+├── .gitignore
+├── .pytest.ini
+├── setup.cfg
 └── README.md
 ```
 
@@ -75,7 +79,7 @@ If you have extra time and want to show off your tooling or best practices, feel
 - Lint your code with flake8 
 - Run tests using pytest
 
-Add a Makefile allowing you to run the following commands:
+Create a Makefile allowing you to run the following commands:
 ``` bash
 make test     # Runs tests
 make format   # Applies black formatting
