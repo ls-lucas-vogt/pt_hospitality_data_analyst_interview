@@ -32,31 +32,44 @@ You will demonstrate your ability to:
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
 
-3. Install the required packages: pandas and numpy
-   
+3. Install the required packages: `pandas` and `numpy`
+
+## 📁 Initial Project Structure
+```
+├── data/
+│   └── sample.csv
+├── src/
+│   └── processor.py      <- Implement your logic here
+├── tests/
+│   └── test_processor.py <- Write at least one test
+├── main.py               <- Runs your script
+├── requirements.txt
+└── README.md
+```
+
 ## 📊 Exercise
 
 You are given a dataset containing transaction data for a hospitality business. Your task is to process this data and 
 generate a summary report.
 
-1. Load the dataset in data/sample.csv 
-2. Create a new column total_price = quantity * unit_price 
-3. Create a boolean column is_high_value (True if total_price > 100)
-4. Create a summary per location_id:
+1. Load the dataset located in `data/sample.csv `
+2. Create a new column `total_price` = `quantity * unit_price`
+3. Create a boolean column `is_high_value` (`True` if `total_price` > `100`)
+4. Create a summary per `location_id`:
    1. Total number of transactions 
    2. Total revenue
    3. Average revenue per transaction
 5. Save your summary in `data/summary.csv`
 6. Write at least one test in `tests/test_processor.py` to validate your code
-7. Generate a requirements.txt file with the packages you used
-8. Commit and push your branch to the remote repository
+7. Generate a `requirements.txt` file with the packages you used
+8. Commit with a message and push your branch to the remote repository
 
-**Optional:**
+**Bonus points:**
 - Handle missing values, duplicated transactions 
 - Refactor your code into a class (e.g., TransactionProcessor)
 - Use vectorized code instead of loops
 
-## 🌟 Bonus – Impress Us!
+## 🌟 Impress Us!
 If you have extra time and want to show off your tooling or best practices, feel free to:
 - Format your code with black 
 - Lint your code with flake8 
@@ -68,17 +81,4 @@ make test     # Runs tests
 make format   # Applies black formatting
 make lint     # Lints with flake8
 make all      # Runs format, lint, and test
-``` 
-
-## Folder structure
-```
-├── data/
-│   └── sample.csv
-├── src/
-│   └── processor.py      <- Implement your logic here
-├── tests/
-│   └── test_processor.py <- Write at least one test
-├── main.py               <- Runs your script
-├── requirements.txt
-└── README.md
 ```
