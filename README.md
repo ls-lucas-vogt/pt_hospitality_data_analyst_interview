@@ -26,13 +26,15 @@ You will demonstrate your ability to:
    cd pt_hospitality_data_analyst_interview
    ```
    
-2. Create and activate a virtual environment. Example:
+2. Create a new branch for your changes.
+   
+3. Create and activate a virtual environment. Example:
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
 
-3. Install the required packages from `requirements.txt` file.
+4. Install the required packages from `requirements.txt` file.
 
 ## 📁 Initial Project Structure
 ```
@@ -40,7 +42,7 @@ pt_hospitality_data_analyst_interview/
 ├── data/
 │   └── sample.csv
 ├── src/
-│   └── processor.py
+│   └── process_transactions.py
 ├── tests/
 │   └── test_processor.py
 ├── main.py
@@ -53,25 +55,14 @@ pt_hospitality_data_analyst_interview/
 
 ## 📊 Exercise
 
-You are given a dataset containing transaction data for a hospitality business. Your task is to process this data and 
-generate a summary report.
+1. You are given a dataset containing transaction data for a hospitality business. Your task is to process this data and 
+generate a summary report using the `src/process_transactions.py` file. The details of the instructions and dataset are outlined
+in the file. 
 
-1. Load the dataset located in `data/sample.csv `
-2. Create a new column `total_price` = `quantity * unit_price`
-3. Create a boolean column `is_high_value` (`True` if `total_price` > `100`)
-4. Create a summary per `location_id`:
-   1. Total number of transactions 
-   2. Total revenue
-   3. Average revenue per transaction
-5. Save your summary in `data/summary.csv`
-6. Write at least one test in `tests/test_processor.py` to validate your code
-7. Generate a `requirements.txt` file with the packages you used
-8. Commit with a message and push your branch to the remote repository
+2. Once you are done, you will be expected to create at least one test in the `tests/test_processor.py` file to test 
+your newly implemented function.
 
-**Bonus points:**
-- Handle missing values, duplicated transactions 
-- Refactor your code into a class (e.g., TransactionProcessor)
-- Use vectorized code instead of loops
+3. The next step will be to update the requirements.txt file before committing and pushing your changes to the remote.
 
 ## 🌟 Impress Us!
 If you have extra time and want to show off your tooling or best practices, feel free to:
