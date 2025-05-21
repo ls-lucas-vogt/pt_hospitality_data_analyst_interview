@@ -25,6 +25,18 @@
 
 # Bonus: The function should also handle null/missing values.
 
+import pandas as pd
 
 def process_transactions(input_csv, output_csv):
     pass
+
+
+
+def loading_cleaning_data(input_csv,output_csv):
+    df_transaction=pd.read_csv('input_csv')
+    df_transaction['total_price']=df_transaction['quantity']*df_transaction['unit_price']
+    df_transaction['total_price'].astype(float)
+    df_transaction['is_high_value']= df_transaction['total_price'].apply(lambda x: 'High' if x>100 else 'Low')
+    df_transaction.groupby('location_id')['total_price'].sum()
+    df_temp=df_transaction[df_transaction['is_high_value']=='High']
+    
