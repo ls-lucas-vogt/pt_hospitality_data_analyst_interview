@@ -26,5 +26,28 @@
 # Bonus: The function should also handle null/missing values.
 
 
+# def process_transactions(input_csv, output_csv):
+#     pass
+
+
+import pandas as pd
+
+
+# print("test")
 def process_transactions(input_csv, output_csv):
+    sample_df = pd.read_csv(input_csv, parse_dates=['datetime'])
+    sample_df["total_price"] = sample_df["quantity"] * sample_df["unit_price"]
+    sample_df["is_high_value"] = sample_df["total_price"] > 100
+    agg_df = pd.dataFrame()
+    agg_df = sample_df.groupby("location_id").agg(
+        total_sales = ("total_price", "sum"),
+        high_values = ("is_high_value", "sum")
+    )
+    print(agg_df)
+    output_csv = print(sample_df.head())
+    return output_csv
     pass
+
+inputcsv = "../data/sample.csv"
+outputcsv = "../data/output.csv"
+process_transactions(inputcsv, outputcsv)
